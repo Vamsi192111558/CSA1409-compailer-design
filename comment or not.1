@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+// Function to check if the string is a single-lined comment
+bool isComment(string str){    
+
+   // Single-lined comment if first two characters are '/'
+   if (str[0] == '/' && str[1] == '/') {
+      return true;
+   }
+   return false;
+}
+int main(){
+   string input = "/hello world */";
+   cout << "Input String: "<< input << endl;
+   if (isComment(input)) {
+      cout << "The input string is a comment." << endl;
+   } else {
+      cout << "The input string is not a comment." << endl;
+   }
+   return 0;
+}
